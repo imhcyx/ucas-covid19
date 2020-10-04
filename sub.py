@@ -74,7 +74,7 @@ def submit(s: requests.Session, old: dict):
     else:
         print("打卡失败，错误信息: ", r.json().get("m"))
 
-    message(api_key, result.get('m')+"\n"+api_key, new_daily)
+    message(api_key, result.get('m'), new_daily)
 
 
 def message(key, title, body):
